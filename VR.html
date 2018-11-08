@@ -1,0 +1,89 @@
+# ArthurVerelst.github.io
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Aframe Environments</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/feiss/aframe-environment-component/ad57b15d/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
+  </head>
+  <body>
+
+   
+      
+    <a-scene effects="bloom, fxaa" bloom="radius: 0.25" fxaa>
+      <a-assets>      
+            <img id="foto" src="img/sneeuwman.jpg.jpg">
+            <img id="sky" src="sky.png">
+            <img id="my-image" src="img/sneeuwman.jpg.jpg">
+      </a-assets>        
+        
+        <!-- Camera -->
+		<a-camera>
+			<a-entity cursor="fuse: true; fuseTimeout: 1000" position="0 0 -1"
+					  geometry="primitive: sphere; radius: 0.005"
+					  material="color: #FF0000; shader: flat; opacity: 0.5">
+					  <a-animation attribute="scale"
+					  			   to="3 3 3"
+					  			   dur="1000"
+					  			   begin="cursor-fusing"
+					  			   fill="backwards"
+					  			   easing="linear">
+					  </a-animation>
+			</a-entity>
+		</a-camera>
+        
+        
+        <!-- landschap -->
+        <a-entity id="env1" environment="preset:checkerboard; shadow:true; fog: 0;skyType: atmosphere; lightPosition: 1.08 2.94 0.95"></a-entity>
+        <a-entity position="-20.81 -1.406 0"></a-entity>
+        <a-sky src="#sky"></a-sky>
+
+        <!-- foto -->
+        
+  <a-image id="foto"src="#my-image"></a-image>
+
+
+        <!-- sneeuwman -->
+        
+
+        <a-sphere id="onderste bol" position="-4.496 1.126 -8.792" radius="1.25" color="white" material="" geometry="" shadow=""></a-sphere>
+        
+        <a-cone id="hoed" color="brown" radius-bottom="1" radius-top="0" position="-4.606 4.851 -8.894" rotation="-11 -3 15" material="color:#804000" geometry="" shadow=""></a-cone>
+        
+        <a-cone id="hoed-2" color="brown" radius-bottom="1" radius-top="0" position="-4.717 3.707 -7.191" rotation="100 -3 15" material="color:#804000" geometry="radiusBottom:0.2;height:2" shadow=""></a-cone>
+        
+        <a-sphere id="onderste bol-2" position="-4.496 3.831 -8.792" radius="1.25" color="white" geometry="radius:0.75" shadow=""></a-sphere>
+        
+        <a-sphere id="bol-2" position="-4.496 2.54 -8.792" radius="1.25" color="white" geometry="radius:1" shadow=""></a-sphere>
+        
+        <a-sphere id="oog-1" position="-4.943 4.074 -8.137" radius="1.25" color="white" geometry="radius:0.2" shadow="" material="color:#000000"></a-sphere>
+        
+<a-sphere id="oog-2" position="-4.202 4.297 -8.205" radius="1.25" color="white" geometry="radius:0.177" shadow="" material="color:#000000"></a-sphere>
+        <!-- tekst -->
+       <a-entity id="tekst" data-brackets-id="272" text="letterSpacing:3.49;opacity:34.23;lineHeight:35.82;wrapCount:10;tabSize:1;height:10;value:This is a snowman;width:7;anchor:left;color:#ffffff" position="-1.424 3.063 -7.261" rotation="2.08 0 0"></a-entity>
+        
+  
+         <!-- box link naar website  -->    
+        <a-entity id="box met weblink" mixin="col1" geometry="" position="4 0.577 -7" 
+                  material="color:#777777;shader:flat;side:double;src:#foto" 
+                  event-set__enter="[object Object]" event-set__leave="[object Object]" 
+                  onclick="location.href='https://nl.wikipedia.org/wiki/Sneeuwpop'" >
+        </a-entity>
+        
+        <a-entity id="link" text="anchor:left;color:#00ff00;value:link;width:3.51" position="3.7 0.8 -6.48"></a-entity>
+        <a-entity id="wiki" text="anchor:left;color:#00ff00;value:Wiki;width:3.51" position="3.7 0.6 -6.48"></a-entity>
+        <a-entity id="Sneeuwman" text="anchor:left;color:#00ff00;value:Sneeuwman;width:3.51" position="3.5 0.4 -6.48">
+        </a-entity>
+        
+        
+
+        
+        
+    </a-scene>
+  </body>
+
+</html>
