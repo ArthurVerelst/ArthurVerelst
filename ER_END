@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#titel{
+color:white;
+}
+background-color:black;
+</style>
+</head>
+<body>
+
+<h1 id=titel>LEAVE THE ROOM</h1>
+
+</body>
+</html>
