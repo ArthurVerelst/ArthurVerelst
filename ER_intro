@@ -1,6 +1,9 @@
 <html>
 <head>
 <style>
+</style>
+</head>
+<body>
 <h1 id=titel> Start the Escape room!</h1>
 <h2> Timer:</h2>
 var time_in_minutes = 10;
