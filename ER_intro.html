@@ -8,12 +8,6 @@
 <h2> Timer:</h2>
 <br><br>
 <div id="clockdiv"></div>
-<br><br>
-<a href="http://simplestepscode.com/" target="_blank">Simple Steps Code</a>
-var time_in_minutes = 10;
-var current_time = Date.parse(new Date());
-var deadline = new Date(current_time + time_in_minutes*60*1000);
-
 
 function time_remaining(endtime){
 	var t = Date.parse(endtime) - Date.parse(new Date());
