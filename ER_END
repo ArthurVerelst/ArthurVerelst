@@ -5,11 +5,11 @@
 #titel{
 color:white;
 }
-background-color:black;
 </style>
 </head>
-<body>
-
+body {
+background: black no-repeat fixed center; 
+}
 <h1 id=titel>LEAVE THE ROOM</h1>
 
 </body>
