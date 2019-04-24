@@ -175,29 +175,27 @@ span.psw {
   updateTimer();
 }
 countdown("ten-countdown", 10, 0);
-      //# sourceURL=pen.js
     </script>
       <p>  </p>
   Number Code:<br>
-  <input type="password" name="psw" id="myPsw" placeholder="Enter Number" value="psw123">
-      
-  <button onclick="myFunction()">Try it</button>
-
-  <p id="demo"></p>
-  <script>
-      if ("myPsw"= 76281){
-     WOW
-     }
-     else{
-         NO WOW
-     }
-      </script>
-<script>
-function myFunction(if ("myPsw"= 76281) {
-  var x = document.getElementById("myPsw").value;
-  document.getElementById("demo").innerHTML = x;
-}
-</script>
+        <input type="password" id="passwd" placeholder = "Enter Password">
+        <button onclick="myfunction()">Submit</button>
+        <p id="answer">Wrong</p>
+        <script>
+            
+        function myfunction() {
+            
+            var x = document.getElementById("passwd").value;
+            if (x == "76281") {
+                document.getElementById("answer").innerHTML = "Correct!";
+            }
+            else {
+                document.getElementById("answer").innerHTML = "Wrong!";
+            }
+            
+        }
+            
+        </script>
   
 </body>
 </html>
