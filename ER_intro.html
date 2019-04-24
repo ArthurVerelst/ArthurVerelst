@@ -187,8 +187,15 @@ countdown("ten-countdown", 10, 0);
   <p id="demo"></p>
   <p if (myPsw = number){
      GG done
-     }
+     }></p>
 <script>
+function myFunction() {
+  var x = document.getElementById("myPsw").value;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+    
+    <script>
 function myFunction() {
   var x = document.getElementById("myPsw").value;
   document.getElementById("demo").innerHTML = x;
