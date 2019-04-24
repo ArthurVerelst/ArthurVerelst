@@ -178,15 +178,25 @@ countdown("ten-countdown", 10, 0);
       //# sourceURL=pen.js
     </script>
              <p id="number" = 76281></p>
-      <form>
+   
   Number Code:<br>
-  <input type="password" name="psw" id="getal">
-      </form>
+  <input type="password" name="psw" id="getal" placeholder="Enter Number" value="psw123">
+      
+  <button onclick="myFunction()">Try it</button>
+
+  <p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myPsw").value;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
       if (getal = number)
       {
-      <button type="submit">Login</button>
+      <button type="submit">Submit</button>
       }
-      
+  
 </body>
 </html>
 
